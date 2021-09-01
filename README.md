@@ -1,6 +1,11 @@
 # VaultSEC
 Aplicación para el almacenamiento seguro en la nube.
 
+## Requisitos mínimos
+- Entorno XAMPP.
+- MySQL/MariaDB (versión 10)
+- PHP (versión 7)
+
 ## Credenciales
 - user : user123 (Usuario normal con contenido de ejemplo)
 - test : test123 (Usuario nuevo)
@@ -16,4 +21,4 @@ En caso de querer añadir más tipos de archivos permitidos debemos hacerlo manu
 1) En "settings.php" añadimos la extensión a la lista blanca.
 2) En la tabla "vs_mimetypes" de la base de datos añadimos el MIME correspondiente. Para más información nos podemos ayudar de la tabla oficial https://www.iana.org/assignments/media-types/media-types.xhtml
 
-Si queremos añadir un usuario nuevo debemos insertarlo manualmente en la base de datos proporcionando un uid (nick), un displayname (nombre), un rid (id del rol correspondiente en la tabla "vs_roles") y una contraseña. Para este último campo debemos pasar su hash BCRYPT, podemos ayudarnos de alguna herramienta online como https://bcrypt-generator.com
+Si queremos añadir un usuario nuevo debemos introducirlo manualmente en la base de datos proporcionando un uid (nick), un displayname (nombre), un rid (id del rol correspondiente en la tabla "vs_roles") y una contraseña. Para este último campo debemos pasar su hash BCRYPT, podemos ayudarnos de alguna herramienta online como https://bcrypt-generator.com
