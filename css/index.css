@@ -1,0 +1,35 @@
+#input-user
+{
+    font-family: Arial, FontAwesome;
+}
+
+#input-pass
+{
+    font-family: Arial, FontAwesome;
+}
+
+input
+{
+    text-align: center;
+    font-size: 2em;
+    width: 100%;
+    padding: 15px 30px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.center
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content
+{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}

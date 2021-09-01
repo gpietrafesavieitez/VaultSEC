@@ -1,0 +1,28 @@
+.truncate {
+    max-width:50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td { 
+    white-space: nowrap; 
+}
+
+div.dataTables_wrapper {
+    margin: 0 auto;
+}
+
+div.container {
+    width: 80%;
+}
+
+.btn-group {
+    display: flex;
+}

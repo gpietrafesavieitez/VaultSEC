@@ -1,0 +1,61 @@
+<div class="modal fade" id="modalEditUserPass" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Editar contraseña</h4>
+            </div>
+            <div class="modal-body">
+                <p class="statusMsg"></p>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputUserNewPass">Nueva contraseña</label>
+                        <input type="password" class="form-control" id="inputUserNewPass" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserNewPass2">Repita nueva contraseña</label>
+                        <input type="password" class="form-control" id="inputUserNewPass2" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputUserOldPass">Contraseña actual</label>
+                        <input type="password" class="form-control" id="inputUserOldPass" required/>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary submitBtn" id="btnEditUserPass">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $("#btnEditUserPass").click(function(){
+        let newPassword = $("#inputUserNewPass").val();
+        let newPassword2 = $("#inputUserNewPass2").val();
+        let oldPassword = $("#inputUserOldPass").val();
+        if(newPassword.length > 0 && newPassword2.length > 0 && oldPassword.length > 0){
+            if(newPassword === newPassword2){
+                let passwords = [oldPassword, newPassword];
+                $.post("api.php", {"editUserPass": passwords})
+                .done(function(data){
+                    try{
+                        let response = JSON.parse(data);
+                        if(response["status"] === "ok"){
+                            $("#modalEditUserPass").modal("toggle");
+                        }else if(response["status"] === "error"){
+                            $(".statusMsg").html("<span style='color:red;'>" + response["message"] + "</span>");
+                        }
+                    }catch(exception){
+                        console.log(exception);
+                        alert("Ha ocurrido un error inesperado.");
+                    };
+                });
+            }else{
+                $(".statusMsg").html("<span style='color:red;'>Las contraseñas deben coincidir.</span>");
+            }
+        }else{
+            $(".statusMsg").html("<span style='color:red;'>El campo no puede estar vacío.</span>");
+        }
+    });
+</script>

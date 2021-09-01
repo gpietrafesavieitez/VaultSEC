@@ -1,0 +1,35 @@
+<div class="modal fade" id="modalAddUser" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Nuevo usuario</h4>
+            </div>
+            <div class="modal-body">
+                <p class="statusMsg"></p>
+                <form role="form">
+                    <div class="form-group">
+                        <label for="inputAddUserUid">Usuario</label>
+                        <input type="text" class="form-control" id="inputAddUserUid" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddUserName">Nombre</label>
+                        <input type="text" class="form-control" id="inputAddUserName" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddUserPass">Contraseña</label>
+                        <input type="password" class="form-control" id="inputAddUserPass" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddUserRole">Rol</label>
+                        <select name="inputAddUserRole" class="form-control" id="inputAddUserRole" required>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary submitBtn" id="btnAddUser">Crear</button>
+            </div>
+        </div>
+    </div>
+</div>

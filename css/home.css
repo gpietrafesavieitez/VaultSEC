@@ -1,0 +1,61 @@
+#input-search {
+    font-family: Arial, FontAwesome;
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+    content: ">" !important;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    background-color: inherit;
+}
+
+.uploadFiles {
+    width: auto;
+    height: 20em;
+    border: 2px dotted darkgray;
+}
+
+.uploadFiles.active {
+    border: 2px dotted black;
+    background-color: whitesmoke;
+}
+
+.uploadFiles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.truncate {
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.btn-group {
+    display: flex;
+}
+
+.table-wrapper {
+    height: 60vh;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .uploadFiles {
+        width: auto;
+        border: none;
+        height: auto;
+    }
+
+    small, .storage-info, #dragText, .logo{
+        display: none;
+    }
+
+}
