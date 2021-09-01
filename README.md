@@ -14,7 +14,7 @@ Aplicación para el almacenamiento seguro en la nube.
 ## Configuración
 - Archivo "db.ini": credenciales para la base de datos.
 - Archivo "settings.php": parámetros para la aplicación.
-- Archivo "vaultsec.sql" contiene el script SQL necesario para importar la base de datos completa. Es posible que sea necesario crear primero la base de datos "vaultsec" y después realizar la importación. Es importante asegurarse que el cotejamiento sea "utf8_spanish_ci" para evitar cualquier problema de codificación.
+- Archivo "vaultsec.sql": contiene el script SQL necesario para importar la base de datos completa. Es posible que sea necesario crear primero la base de datos "vaultsec" y después realizar la importación. Es importante asegurarse que el cotejamiento sea "utf8_spanish_ci" para evitar cualquier problema de codificación.
 
 ## Uso
 En caso de querer añadir más tipos de archivos permitidos debemos hacerlo manualmente:
